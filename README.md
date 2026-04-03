@@ -57,6 +57,8 @@ FEATHERLESS_MODEL=Qwen/Qwen3-8B
 
 ### 3. Start the server
 
+#### macOS / Linux
+
 ```bash
 bash run.sh
 ```
@@ -66,10 +68,18 @@ bash run.sh
 - Installs dependencies from `requirements.txt` (skips if already up-to-date)
 - Starts the server at `http://localhost:8000`
 
-Or manually:
+> **Note:** `run.sh` is a Bash script and only works on **macOS and Linux**. Windows users should follow the manual steps below.
+
+#### Windows / Manual setup
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
+python3 -m venv .venv
+
+# macOS/Linux
+source .venv/bin/activate
+# Windows
+.venv\Scripts\activate
+
 pip install -r requirements.txt
 python main.py
 ```
